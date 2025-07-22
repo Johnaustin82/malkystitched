@@ -68,6 +68,12 @@ const Landingpage = () => {
     { id: 6, category: "Special", image: "https://images.unsplash.com/photo-1564121054508-4b7f7c2d3263?w=400&h=300&fit=crop" }
   ];
 
+  const openInstagram = () => {
+    const url = "https://www.instagram.com/malkystitched/";
+    window.open(url, '_blank');
+  };
+
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-400 via-blue-400 to-cyan-400">
       {/* Navigation */}
@@ -342,12 +348,15 @@ const Landingpage = () => {
               <div className="mt-8 pt-8 border-t border-white/20">
                 <h4 className="font-semibold text-white mb-4">Follow Us</h4>
                 <div className="flex space-x-4">
-                  <div className="bg-white/20 backdrop-blur-md rounded-full p-3 hover:bg-white/30 transition-colors cursor-pointer">
+                  
+                  <button 
+                  onClick={openInstagram}
+                  className="bg-white/20 backdrop-blur-md rounded-full p-3 hover:bg-white/30 transition-colors cursor-pointer">
                     <Instagram className="w-5 h-5 text-white" />
-                  </div>
-                  <div className="bg-white/20 backdrop-blur-md rounded-full p-3 hover:bg-white/30 transition-colors cursor-pointer">
+                  </button>
+                  {/* <div className="bg-white/20 backdrop-blur-md rounded-full p-3 hover:bg-white/30 transition-colors cursor-pointer">
                     <Facebook className="w-5 h-5 text-white" />
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

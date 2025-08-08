@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Crown, Scissors, Heart, Star, Mail, Phone, MapPin, Instagram, Facebook, ChevronDown } from 'lucide-react';
+import { Helmet } from 'react-helmet';
 
 const Landingpage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -75,6 +76,19 @@ const Landingpage = () => {
 
 
   return (
+    <>
+    <Helmet>
+      <title>Malky Stitched | Custom Embroidery & Stitching Services in Nairobi</title>
+      <meta 
+        name='description'
+        content='We specialize in stitching and embroidery'
+      />
+       <link rel="canonical" href="https://malkystitched.vercel.app/" />
+      <meta
+        name='keywords'
+        content='Malky Stitched, embroidery Nairobi, stitching services Kenya, custom tailoring Donholm, clothing alterations, handmade embroidery, personalized fabric design'
+      />
+    </Helmet>
     <div className="min-h-screen bg-gradient-to-br from-purple-400 via-blue-400 to-cyan-400">
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-white/10 backdrop-blur-md z-50 border-b border-white/20">
@@ -415,6 +429,7 @@ const Landingpage = () => {
         </div>
       </footer>
     </div>
+    </>
   );
 };
 
